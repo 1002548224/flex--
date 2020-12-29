@@ -1,0 +1,177 @@
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;  /*这个属性只用于iOS (iPhone和iPad)*/
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+div {
+    box-sizing: border-box;
+}
+/* 搜索模块 */
+.search-index {
+    display: flex;
+    /* 固定定位 以屏幕为止 */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    /* 固定的盒子应该有宽度 */
+    -webkit-transform: translateX(-50%); /* 兼容老版本的浏览器 */
+    transform: translateX(-50%);  /* 向左移动自身的50% */
+    width: 100%;
+    max-width: 540px;
+    min-width: 320px;
+    height: 44px;
+    background-color: #f6f6f6;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.search {
+    position: relative;
+    flex: 1;
+    height: 26px;
+    line-height: 24px;
+    border: 1px solid #ccc;
+    /* margin: 6px 10px; */
+    margin: auto 6px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #666;
+    padding-left: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  /*加阴影*/
+}
+.search::before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background: url(../images/sprite.png) no-repeat -60px -280px;
+    background-size: 104px auto;
+}
+.user {
+    width: 44px;
+    height: 44px;
+    font-size: 12px;
+    text-align: center;
+    color: #2eaae0;
+}
+.user::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    /* 精灵图 */
+    background: url(../images/sprite.png) no-repeat -59px -194px;
+    background-size: 104px auto;
+    margin: 4px auto -2px;
+}
+/* focus */
+.focus {
+    padding-top: 44px;
+}
+.focus img {
+    width: 100%;
+}
+/* 局部导航栏 */
+.local-nav {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 8px;
+    /* margin: 3px 4px; */
+}
+.local-nav li {
+    flex: 1;
+}
+.local-nav a {
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+/* 属性选择器 */
+.local-nav li [class^="local-nav-icon"] {
+    width: 32px;
+    height: 32px;
+    background-color: pink;
+    background: url(../images/localnav_bg.png) no-repeat 0 0;
+    background-size: 32px auto;
+}
+.local-nav li .local-nav-icon-icon2{
+    background-position: 0 -32px;
+}
+.local-nav li .local-nav-icon-icon3{
+    background-position: 0 -64px;
+}
+.local-nav li .local-nav-icon-icon4{
+    background-position: 0 -96px;
+}
+.local-nav li .local-nav-icon-icon5{
+    background-position: 0 -128px;
+}
+/* nav */
+nav {
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 4px 3px;
+}
+.nav-common {
+    height: 88px;
+    display: flex;
+    background-color: pink;
+    /* 背景渐变 必须添加浏览器私有前缀 */
+}
+.nav-common:nth-child(2){
+    margin: 3px 0;
+}
+.nav-items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+/* -n+2就是前面两个 */
+.nav-items:nth-child(-n+2) {
+    border-right: 1px solid #fff;
+}
+
+.nav-items a {
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    font-size: 14px;
+    text-shadow: 1px 1px rgba(0, 0, 0, .2);    /* 文字阴影 */
+}
+.nav-items a:nth-child(1) {
+    border-bottom: 1px solid #fff;
+}
+.nav-items:nth-child(1) a{
+    border: 0;
+    background: url(../images/hotel.png) no-repeat bottom center;
+    background-size: 121px auto;
+}
+.nav-common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #fa5a55, #fa994d);
+}
+.nav-common:nth-child(2) {
+    background: -webkit-linear-gradient(left, #4b90ed, #53bced);
+}
+.nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #34c2a9, #6cd559);
+}
