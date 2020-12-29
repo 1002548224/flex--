@@ -6,25 +6,20 @@
     <title>Document</title>
     <style>
         div {
-            /* 父级添加flex属性 */
             display: flex;
-            width: 80%;
+            width: 600px;
             height: 300px;
             background-color: pink;
-            justify-content: space-around;
-            /* 默认的主轴是x轴 行 row */
-            /* 元素跟着主轴排列 */
-            /* flex-direction: row; */
-            /* flex-direction: row-reverse; */
-            /* flex-direction: column; */
-            flex-direction: column-reverse;
+            /* flex-direction: column;
+            flex-wrap: wrap; */
+            /* 简写 */
+            flex-flow: column wrap ;
+         
         }
         div span {
             width: 150px;
             height: 100px;
             background-color: purple;
-            margin-right: 5px;
-            /* flex: 1; */
         }
     </style>
 </head>
@@ -33,6 +28,9 @@
         <span>1</span>
         <span>2</span>
         <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
     </div>
 </body>
 </html>

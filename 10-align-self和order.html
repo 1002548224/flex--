@@ -6,25 +6,25 @@
     <title>Document</title>
     <style>
         div {
-            /* 父级添加flex属性 */
             display: flex;
             width: 80%;
             height: 300px;
             background-color: pink;
-            justify-content: space-around;
-            /* 默认的主轴是x轴 行 row */
-            /* 元素跟着主轴排列 */
-            /* flex-direction: row; */
-            /* flex-direction: row-reverse; */
-            /* flex-direction: column; */
-            flex-direction: column-reverse;
+            /* align-items: flex-end; */
+         
         }
         div span {
             width: 150px;
             height: 100px;
             background-color: purple;
             margin-right: 5px;
-            /* flex: 1; */
+        }
+        div span:nth-child(2){
+            /* 默认是0，-1比0小，所以在前面 */
+            order: -1;
+        }
+        div span:nth-child(3) {
+            align-self: flex-end;
         }
     </style>
 </head>
